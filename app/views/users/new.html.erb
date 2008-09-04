@@ -1,0 +1,12 @@
+<div class="signup">
+<h3><%= _("New Account") %></h3>
+
+<% simple_form_for @user, :autocomplete=>'off' do |f| %>
+  <%= render :partial=>f %>
+  
+  <p>
+    <%= link_to _('Cancel'), login_path, :id=>'cancel_link' %>
+    <%= submit_tag _('Sign up'), :disable_with=>_('Sign up...') %>
+  </p>
+<% end %>
+</div>

@@ -1,0 +1,62 @@
+<div class="admin">
+<h1><%= _("All Users") %></h1>
+<p>
+  <% if params[:invisible] == 'show' %>
+    <%= link_to _('Hide deleted record'), users_path %>
+  <% else %>
+    <%= link_to _('Show deleted record'), users_path(:invisible => 'show') %>
+  <% end %>
+</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Enabled?</th>
+    <th>Roles</th>
+    <th>remember_at</th>
+    <th>activation</th>
+    <th>activated_at</th>
+    <th>password_reset</th>
+    <th>created_at</th>
+    <th>updated_at</th>
+    <th>deleted_at</th>
+    <th>state</th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <% unless user.deleted? && params[:invisible] != 'show' %>
+  <tr class="<%= user.suspended? ? 'disable' : '' %> <%= cycle('odd', 'even') %>">
+    <td><%=h user.id %></td>
+    <td><%=h user.login %></td>
+    <td><%=h user.email %></td>
+    <td>
+      <%= user.suspended? ? 'no' : 'yes' %>
+      <% if user.suspended? %>
+        <%= link_to_unless((user == current_user), _('enable'), unsuspend_user_path(user.id), :method => :put) {} %>
+      <% else %>
+        <%= link_to_unless((user == current_user), _('disable'), suspend_user_path(user.id), :method => :put) {} %>
+      <% end %>
+    </td>
+    <td><%= link_to_unless((user == current_user), _('edit roles'), user_permissions_path(user)) {} %></td>
+    <td><%= user.remember_token_expires_at.to_s(:simple) %></td>
+    <td><%= truncate(user.activation_code, 20) %></td>
+    <td><%= user.activated_at.to_s(:simple) %></td>
+    <td><%= truncate(user.password_reset_code, 20) %></td>
+    <td><%= user.created_at.to_s(:simple) %></td>
+    <td><%= user.updated_at.to_s(:simple) %></td>
+    <td><%= user.deleted_at.to_s(:simple) %></td>
+    <td><%= user.state %></td>
+    <td>
+      <% if user.deleted? %>
+        <%= link_to _('Purge'), purge_user_path(user.id), :method => :delete %>
+      <% else %>
+        <%= link_to _('Destroy'), user, :method => :delete %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+</div>

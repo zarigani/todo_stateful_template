@@ -1,0 +1,32 @@
+.login {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #444;
+  color: white;
+  width: 14.2em;
+}
+.login a { color: #ccc; }
+.login a:visited { color: #ccc; }
+.login a:hover { color: #fff; background-color:#222; }
+
+.login_form {
+  padding: 0 1em;
+  margin: 0;
+  background: #444;
+}
+.login_link {
+  background: #222;
+}
+.login input[type=text], 
+.login input[type=password] {
+  padding: 2px 0;
+  margin: 0;
+  width: 14em;
+}
+.login input[type=submit] {
+  padding: 0;
+  margin: 0 2px;
+  width: 14em;
+}

@@ -1,0 +1,9 @@
+<% new_or_create = action_name == 'new' || action_name == 'create' %>
+
+<%= label_msg_form.text_field :login %>
+<%#= label_msg_form.text_field :name %>
+<%= label_msg_form.text_field :email, :disabled=>!(new_or_create) %>
+<% if new_or_create %>
+  <%= label_msg_form.password_field :password %>
+  <%= label_msg_form.password_field :password_confirmation %>
+<% end %>

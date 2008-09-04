@@ -1,0 +1,11 @@
+<div class="signup">
+<h3><%= _("Your Account") %></h3>
+
+<% simple_form_for @user, :autocomplete=>'off', :disabled=>true do |f| %>
+  <%= render :partial=>f %>
+<% end %>
+
+<p><%= _("Updated on: ") + @user.updated_at.in_time_zone('Tokyo').to_s(:ja) %></p>
+
+<p><%= link_to _("Home"), root_path %></p>
+</div>

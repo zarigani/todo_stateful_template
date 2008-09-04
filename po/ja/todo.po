@@ -1,0 +1,608 @@
+# Japanese translations for PACKAGE package
+# PACKAGE パッケージに対する英訳.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 正博 <>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: todo_role 1.0.0\n"
+"POT-Creation-Date: 2008-09-01 15:14+0900\n"
+"PO-Revision-Date: 2008-08-05 06:58+0900\n"
+"Last-Translator: 正博 <>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: app/controllers/change_emails_controller.rb:18
+msgid "A email reset link has been sent to your email address."
+msgstr "メールアドレスを再設定するリンクをメール送信しました。"
+
+#: app/controllers/change_emails_controller.rb:21
+msgid "Your email was not changed."
+msgstr "メールは変更されませんでした。"
+
+#: app/controllers/change_emails_controller.rb:32
+msgid "Invalid email reset URL."
+msgstr "メールアドレスを再設定するURLが無効です。"
+
+#: app/controllers/change_emails_controller.rb:36
+msgid "Another account logged in. You must log in."
+msgstr ""
+"他のアカウントがログインしていました。自分でログインする必要があります。"
+
+#: app/controllers/change_emails_controller.rb:39
+msgid "Your email has been reset!"
+msgstr "メールアドレスは再設定されました。"
+
+#: app/controllers/change_emails_controller.rb:42
+msgid "Invalid email."
+msgstr "メールアドレスが無効です。"
+
+#: app/controllers/change_passwords_controller.rb:18
+msgid "Password successfully updated."
+msgstr "パスワードは更新されました。"
+
+#: app/controllers/change_passwords_controller.rb:21
+msgid "Your password was not changed."
+msgstr "パスワードは変更されませんでした。"
+
+#: app/controllers/forgot_passwords_controller.rb:18
+msgid "Could not find a user with that email address."
+msgstr "そのメールアドレスは登録されていません。"
+
+#: app/controllers/forgot_passwords_controller.rb:21
+msgid "A password reset link has been sent to your email address."
+msgstr "パスワード再設定のリンクをメール送信しました。"
+
+#: app/controllers/forgot_passwords_controller.rb:29
+msgid "A password reset link could not be sent."
+msgstr "パスワード再設定のリンクをメール送信出来ませんでした。"
+
+#: app/controllers/forgot_passwords_controller.rb:68
+msgid ""
+"Sorry - That is an invalid password reset code. Please check your code and "
+"try again. (Perhaps your email client inserted a carriage return?)"
+msgstr ""
+"すいません、そのパスワード再設定リンクは無効です。もう一度リンクを確認してみ"
+"てください。<br />（メールソフトによって改行コードが挿入された可能性もありま"
+"す。）"
+
+#: app/controllers/forgot_passwords_controller.rb:85
+msgid "Password reset."
+msgstr "パスワードは再設定されました。"
+
+#: app/controllers/forgot_passwords_controller.rb:88
+msgid "Password mismatch."
+msgstr "パスワードが不適切です。"
+
+#: app/controllers/forgot_passwords_controller.rb:94
+msgid "Sorry - Password not reset."
+msgstr "すいません、パスワードは再設定できませんでした。"
+
+#: app/controllers/roles_controller.rb:49
+msgid "Role was successfully created."
+msgstr "新しい権限が作成されました。"
+
+#: app/controllers/roles_controller.rb:66
+msgid "Role was successfully updated."
+msgstr "権限は更新されました。"
+
+#: app/controllers/sessions_controller.rb:14
+msgid "Your username or password is incorrect."
+msgstr "ユーザー名またはパスワードが違っています。"
+
+#: app/controllers/sessions_controller.rb:16
+msgid ""
+"Your account is not active, please check your email for the activation code."
+msgstr ""
+"アカウントが有効になっていません。メールを確認してアカウントを有効にしてくだ"
+"さい。"
+
+#: app/controllers/sessions_controller.rb:18
+msgid "Your account has been disabled."
+msgstr "そのアカウントは利用できません。"
+
+#: app/controllers/sessions_controller.rb:23
+msgid "Logged in successfully"
+msgstr "ログインしました。"
+
+#: app/controllers/sessions_controller.rb:49
+msgid "You have been logged out."
+msgstr "ログアウトしました。"
+
+#: app/controllers/users_controller.rb:37
+msgid ""
+"Thanks for signing up! Please check your email to activate your account "
+"before logging in."
+msgstr ""
+"ご登録頂きありがとうございます。ログインの前にメールを確認してアカウントを有"
+"効にしてください。"
+
+#: app/controllers/users_controller.rb:40
+msgid "There was a problem creating your account."
+msgstr "ユーザー登録で問題が発生しました。"
+
+#: app/controllers/users_controller.rb:56
+msgid "Your account was successfully updated!"
+msgstr "ユーザー情報は更新されました。"
+
+#: app/controllers/users_controller.rb:59
+msgid "Your account was not changed."
+msgstr "ユーザー情報は変更されませんでした。"
+
+#: app/controllers/users_controller.rb:69
+msgid ""
+"The activation code was missing.  Please follow the URL from your email."
+msgstr ""
+"アクティベーションコードが違っています。メールのURLをクリックしてください。"
+
+#: app/controllers/users_controller.rb:72
+msgid ""
+"Activation code not found. Has your account already been activated? Plese "
+"try to log in."
+msgstr ""
+"対応するアクティベーションコードがありません。そのアカウントは既に有効な状態"
+"ではないでしょうか？ログインしてみてください。"
+
+#: app/controllers/users_controller.rb:75
+msgid "Your account has already been activated. You can log in below."
+msgstr "アカウントは既に有効な状態です。以下でログイン出来ます。"
+
+#: app/controllers/users_controller.rb:78
+msgid "Your account has been activated! You can now login."
+msgstr "アカウントは有効な状態になりました。今すぐログイン出来ます。"
+
+#: app/controllers/users_controller.rb:81
+msgid "System error occured."
+msgstr ""
+
+#: app/controllers/users_controller.rb:88
+msgid "%{user_login} disabled"
+msgstr "%{user_login}を無効にしました。"
+
+#: app/controllers/users_controller.rb:90
+msgid "There was a problem disabling this user."
+msgstr "このユーザーを無効にする時問題が発生しました。"
+
+#: app/controllers/users_controller.rb:97
+msgid "%{user_login} enabled"
+msgstr "%{user_login}は有効になりました。"
+
+#: app/controllers/users_controller.rb:99
+msgid "There was a problem enabling this user."
+msgstr "このユーザーを有効にする時問題が発生しました。"
+
+#: app/models/permission.rb:-
+msgid "permission"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|Role"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|User"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|Created at"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|Updated at"
+msgstr ""
+
+#: app/models/role.rb:-
+msgid "role"
+msgstr "権限"
+
+#: app/models/role.rb:-
+msgid "Role|Name"
+msgstr "名称"
+
+#: app/models/role.rb:-
+msgid "Role|Created at"
+msgstr "作成日"
+
+#: app/models/role.rb:-
+msgid "Role|Updated at"
+msgstr "更新日"
+
+#: app/models/todo.rb:-
+msgid "todo"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Body"
+msgstr "内容"
+
+#: app/models/todo.rb:-
+msgid "Todo|Due"
+msgstr "期日"
+
+#: app/models/todo.rb:-
+msgid "Todo|Done"
+msgstr "完了"
+
+#: app/models/todo.rb:-
+msgid "Todo|Created at"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Updated at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "user"
+msgstr ""
+
+#: app/models/user.rb:- app/views/sessions/new.html.erb:7
+msgid "User|Login"
+msgstr "ログイン名"
+
+#: app/models/user.rb:-
+msgid "User|Name"
+msgstr "名前"
+
+#: app/models/user.rb:-
+msgid "User|Email"
+msgstr "Eメール"
+
+#: app/models/user.rb:-
+msgid "User|Crypted password"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Salt"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Created at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Updated at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Remember token"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Remember token expires at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Activation code"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Activated at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|State"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Deleted at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Password reset code"
+msgstr ""
+
+#: app/models/user.rb:10 app/views/sessions/new.html.erb:10
+msgid "User|Password"
+msgstr "パスワード"
+
+#: app/models/user.rb:11
+msgid "User|Password confirmation"
+msgstr "パスワード確認"
+
+#: app/models/user.rb:12
+msgid "User|Old password"
+msgstr "古いパスワード"
+
+# # validates message
+#: app/models/user.rb:13
+msgid "%{fn} doesn't match confirmation"
+msgstr "%{fn}が一致しません。"
+
+#: app/models/user.rb:14
+msgid "use only letters, numbers, and .-_@ please."
+msgstr "英数字と .-_@ のみ利用できます。"
+
+#: app/models/user.rb:15
+msgid "should look like an email address."
+msgstr "メールアドレスの書式に準じてください。"
+
+#: app/models/user.rb:16
+msgid "avoid non-printing characters and ＼&gt;&lt;&amp;/ please."
+msgstr "非表示文字と ＼&gt;&lt;&amp;/ は避けてください。"
+
+# msgid "avoid non-printing characters and \&gt;&lt;&amp;/ please."
+# msgstr "非表示文字と \&gt;&lt;&amp;/ は避けてください。"
+#: app/models/user_mailer.rb:7
+msgid "Please activate your new account"
+msgstr "アカウントを有効にする手続きをお願いします。"
+
+#: app/models/user_mailer.rb:14
+msgid "Your account has been activated!"
+msgstr "アカウントは有効になりました。"
+
+#: app/models/user_mailer.rb:20
+msgid "You have requested to change your password"
+msgstr "パスワード変更の依頼を受け付けました。"
+
+#: app/models/user_mailer.rb:26
+msgid "Your password has been reset."
+msgstr "パスワードは再設定されました。"
+
+#: app/models/user_mailer.rb:32
+msgid "Please reset your new email"
+msgstr "新しいメールアドレスを再設定してください。"
+
+#: app/models/user_mailer.rb:40
+msgid "Your email has been reset."
+msgstr "メールアドレスは再設定されました。"
+
+#: app/views/change_emails/edit.html.erb:2 app/views/layouts/_menu.html.erb:13
+msgid "Change Email"
+msgstr "メールアドレスの変更"
+
+#: app/views/change_emails/edit.html.erb:8
+#: app/views/change_passwords/edit.html.erb:10
+#: app/views/forgot_passwords/new.html.erb:9 app/views/users/edit.html.erb:8
+#: app/views/users/new.html.erb:7
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: app/views/change_emails/edit.html.erb:9
+msgid "Reset Email"
+msgstr "メールアドレスの再設定手続き"
+
+#: app/views/change_emails/edit.html.erb:9
+msgid "Reset Email..."
+msgstr "メールアドレスの再設定手続き中..."
+
+#: app/views/change_passwords/edit.html.erb:2
+#: app/views/layouts/_menu.html.erb:12
+msgid "Change Password"
+msgstr "パスワードの変更"
+
+#: app/views/change_passwords/edit.html.erb:6
+msgid "New password"
+msgstr "新しいパスワード"
+
+#: app/views/change_passwords/edit.html.erb:7
+msgid "New password confirmation"
+msgstr "新しいパスワード確認"
+
+#: app/views/change_passwords/edit.html.erb:11
+msgid "Change password"
+msgstr "パスワードを変更する"
+
+#: app/views/forgot_passwords/edit.html.erb:2
+#: app/views/forgot_passwords/new.html.erb:10
+msgid "Reset Password"
+msgstr "パスワードの再設定"
+
+#: app/views/forgot_passwords/edit.html.erb:10
+msgid "Reset Your Password"
+msgstr "パスワードを再設定する"
+
+#: app/views/forgot_passwords/edit.html.erb:10
+msgid "Reset Your Password..."
+msgstr "パスワードを再設定中..."
+
+#: app/views/forgot_passwords/new.html.erb:2
+#: app/views/layouts/_menu.html.erb:20 app/views/sessions/new.html.erb:23
+msgid "Forgot Password?"
+msgstr "パスワード忘れ？"
+
+#: app/views/forgot_passwords/new.html.erb:5
+msgid "What is the email address used to create your account?"
+msgstr "ユーザー登録した時のメールアドレスを教えてください。"
+
+#: app/views/forgot_passwords/new.html.erb:10
+msgid "Reset Password..."
+msgstr "パスワードの再設定手続き中..."
+
+#: app/views/layouts/_menu.html.erb:5
+msgid "Roles"
+msgstr "権限管理"
+
+#: app/views/layouts/_menu.html.erb:6
+msgid "Users"
+msgstr "ユーザー管理"
+
+#: app/views/layouts/_menu.html.erb:11
+msgid "Edit Profile"
+msgstr "ユーザー情報の変更"
+
+#: app/views/layouts/_menu.html.erb:14
+msgid "Log Out"
+msgstr "ログアウト"
+
+#: app/views/layouts/_menu.html.erb:17
+msgid "Logged in as:"
+msgstr "ログイン中:"
+
+#: app/views/layouts/_menu.html.erb:18 app/views/users/show.html.erb:10
+msgid "Home"
+msgstr "ホーム"
+
+#: app/views/layouts/_menu.html.erb:21 app/views/sessions/new.html.erb:22
+msgid "Sign Up"
+msgstr "ユーザー登録"
+
+#: app/views/layouts/_menu.html.erb:22 app/views/sessions/new.html.erb:3
+msgid "Log In"
+msgstr "ログイン"
+
+#: app/views/permissions/index.html.erb:3
+msgid "Roles for %{user_login}"
+msgstr "%{user_login} の権限"
+
+#: app/views/permissions/index.html.erb:6
+msgid "Roles assigned"
+msgstr "設定された権限"
+
+#: app/views/permissions/index.html.erb:12
+msgid "Roles available"
+msgstr "未設定の権限"
+
+#: app/views/permissions/index.html.erb:17 app/views/roles/edit.html.erb:10
+#: app/views/roles/new.html.erb:9 app/views/roles/show.html.erb:8
+msgid "Back"
+msgstr "戻る"
+
+#: app/views/roles/_role.html.erb:4
+msgid "remove role"
+msgstr "権限を削除"
+
+#: app/views/roles/_role.html.erb:6
+msgid "assign role"
+msgstr "権限を設定"
+
+#: app/views/roles/edit.html.erb:5
+msgid "Update"
+msgstr "修正する"
+
+#: app/views/roles/edit.html.erb:9 app/views/roles/index.html.erb:17
+msgid "Show"
+msgstr "表示"
+
+#: app/views/roles/index.html.erb:2
+msgid "Listing roles"
+msgstr "権限リスト"
+
+#: app/views/roles/index.html.erb:18 app/views/roles/show.html.erb:7
+msgid "Edit"
+msgstr "編集"
+
+#: app/views/roles/index.html.erb:19
+msgid "Destroy"
+msgstr "削除"
+
+#: app/views/roles/index.html.erb:19
+msgid "Are you sure?"
+msgstr "本当に削除しますか？"
+
+#: app/views/roles/index.html.erb:24
+msgid "New role"
+msgstr "権限の新規作成"
+
+#: app/views/roles/new.html.erb:5
+msgid "Create"
+msgstr "新規作成する"
+
+#: app/views/sessions/new.html.erb:14
+msgid "Remember me"
+msgstr "ログインを継続する"
+
+#: app/views/sessions/new.html.erb:16
+msgid "Log in"
+msgstr "ログイン"
+
+#: app/views/sessions/new.html.erb:16
+msgid "Log in..."
+msgstr "ログイン中..."
+
+#: app/views/user_mailer/activation.erb:1
+msgid ""
+"%{user_login}, your account has been activated.  To visit the site, follow "
+"the link below:"
+msgstr ""
+"%{user_login} さん、アカウントは有効になりました。サイトへ移動するには、以下"
+"のリンクを開いてください。"
+
+#: app/views/user_mailer/change_email.erb:1
+msgid "%{user_login}, to reset your email, please visit"
+msgstr ""
+"%{user_login} さん、メールアドレスを再設定するには以下のURLを開いてください。"
+
+#: app/views/user_mailer/forgot_password.erb:1
+msgid "%{user_login}, to reset your password, please visit"
+msgstr ""
+"%{user_login} さん、パスワードを再設定するには以下のURLを開いてください。"
+
+#: app/views/user_mailer/reset_email.erb:1
+msgid "%{user_login}, Your email has been reset"
+msgstr "%{user_login} さん、メールアドレスは再設定されました。"
+
+#: app/views/user_mailer/reset_password.erb:1
+msgid "%{user_login}, Your password has been reset"
+msgstr "%{user_login} さん、パスワードは再設定されました。"
+
+#: app/views/user_mailer/signup_notification.erb:1
+msgid "Your account has been created."
+msgstr "ユーザー登録を受け付けました。"
+
+#: app/views/user_mailer/signup_notification.erb:3
+msgid "Username: %{user_login}"
+msgstr "ユーザー名: %{user_login}"
+
+#: app/views/user_mailer/signup_notification.erb:5
+msgid "Visit this url to activate your account:"
+msgstr "アカウントを有効にするために、このURLを開いてください。"
+
+#: app/views/users/edit.html.erb:2
+msgid "Edit Your Account"
+msgstr "ユーザー情報の編集"
+
+#: app/views/users/edit.html.erb:9
+msgid "Save"
+msgstr "保存する"
+
+#: app/views/users/index.html.erb:2
+msgid "All Users"
+msgstr "ユーザーリスト"
+
+#: app/views/users/index.html.erb:28
+msgid "enable"
+msgstr "有効にする"
+
+#: app/views/users/index.html.erb:30
+msgid "disable"
+msgstr "無効にする"
+
+#: app/views/users/index.html.erb:33
+msgid "edit roles"
+msgstr "権限の設定"
+
+#: app/views/users/new.html.erb:2
+msgid "New Account"
+msgstr "ユーザー登録"
+
+#: app/views/users/new.html.erb:8
+msgid "Sign up"
+msgstr "ユーザー登録する"
+
+#: app/views/users/new.html.erb:8
+msgid "Sign up..."
+msgstr "ユーザー登録中..."
+
+#: app/views/users/show.html.erb:2
+msgid "Your Account"
+msgstr "ユーザー情報"
+
+#: app/views/users/show.html.erb:8
+msgid "Updated on: "
+msgstr "最終更新日時: "
+
+#: lib/authenticated_role.rb:5
+msgid "An account is logged in now. Please logout at once."
+msgstr "現在ログイン中です。一旦、ログアウトしてください。"
+
+#: lib/authenticated_role.rb:11
+msgid "You don't have permission to complete that action."
+msgstr "そのページにアクセスする権限がありません。"
+
+#: lib/authenticated_system.rb:68
+msgid "You must be logged in to access this feature."
+msgstr "そのページにアクセスするにはログインが必要です。"

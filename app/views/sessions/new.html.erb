@@ -1,0 +1,27 @@
+<div class="login">
+
+<h3><%= _("Log In") %></h3>
+
+<div class="login_form">
+  <% form_tag session_path do %>
+    <p><%= label_tag 'login', _('User|Login') %><br />
+    <%= text_field_tag 'login', @login, :autocomplete=>'off' %></p>
+
+    <p><%= label_tag 'password', _('User|Password') %><br />
+    <%= password_field_tag 'password' %></p>
+
+    <p><%= check_box_tag 'remember_me', '1', @remember_me %>
+    <%= label_tag 'remember_me', _('Remember me') %></p>
+
+    <%= submit_tag _('Log in'), :disable_with=>_('Log in...') %>
+  <% end %>
+</div>
+
+<div class="login_link">
+  <ul>
+    <li><%= link_to _("Sign Up"), new_user_path %></li>
+    <li><%= link_to _("Forgot Password?"), new_forgot_password_path %></li>
+  </ul>
+</div>
+
+</div>

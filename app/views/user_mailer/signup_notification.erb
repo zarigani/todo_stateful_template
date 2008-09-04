@@ -1,0 +1,7 @@
+<%= _("Your account has been created.") %>
+
+  <%= _("Username: %{user_login}") % {:user_login=>h(@user.login_or_email)} %>
+
+<%= _("Visit this url to activate your account:") %>
+
+  <%= @url %>

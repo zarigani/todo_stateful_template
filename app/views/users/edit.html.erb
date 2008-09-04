@@ -1,0 +1,12 @@
+<div class="signup">
+<h3><%= _("Edit Your Account") %></h3>
+
+<% simple_form_for @user, :autocomplete=>'off' do |f| %>
+  <%= render :partial=>f %>
+
+  <p>
+    <%= link_to _('Cancel'), root_path, :id=>'cancel_link' %>
+    <%= f.submit _('Save') %>
+  </p>
+<% end %>
+</div>

@@ -1,0 +1,12 @@
+<div class="admin">
+<% label_msg_form_for(@role) do |f| %>
+  <%= render :partial=>f %>
+
+  <%= f.submit _("Update") %>
+<% end %>
+
+<p>
+  <%= link_to _('Show'), @role %> |
+  <%= link_to _('Back'), roles_path %>
+</p>
+</div>

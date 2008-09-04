@@ -1,0 +1,8 @@
+<li>
+  <%= role.name %>
+  <% if @user.has_role?(role.name) %>
+    <%= link_to _('remove role'), user_permission_url(@user, role.id), :method => :put %>
+  <% else %>
+    <%= link_to _('assign role'), user_permission_url(@user, role.id), :method => :put %>
+  <% end %>
+</li>

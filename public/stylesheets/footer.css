@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    }
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -20px; /* the bottom margin is the negative value of the footer's height */
+    }
+.footer, .push {
+    height: 20px; /* .push must be the same height as .footer */
+    }
+
+.footer {
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    background: #444;
+    font-size: x-small;
+}
+#footer {
+    padding-top: 2px;
+    padding-right: 10px;
+}

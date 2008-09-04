@@ -1,0 +1,25 @@
+<div class="admin">
+<h1><%= _("Listing roles") %></h1>
+
+<table>
+  <tr>
+    <th style="width:2em">ID</th>
+    <th>Name</th>
+    <th style="width:4em"></th>
+    <th style="width:4em"></th>
+    <th style="width:4em"></th>
+  </tr>
+
+<% for role in @roles %>
+  <tr>
+    <td><%=h role.id %></td>
+    <td><%=h role.name %></td>
+    <td><%= link_to _('Show'), role %></td>
+    <td><%= link_to _('Edit'), edit_role_path(role) %></td>
+    <td><%= link_to _('Destroy'), role, :confirm => _('Are you sure?'), :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<p><%= link_to _('New role'), new_role_path %></p>
+</div>

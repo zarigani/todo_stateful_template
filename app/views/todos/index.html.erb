@@ -1,0 +1,24 @@
+<h1>Listing todos</h1>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Due</th>
+    <th>Done</th>
+  </tr>
+
+<% for todo in @todos %>
+  <tr>
+    <td><%=h todo.body %></td>
+    <td><%=h todo.due %></td>
+    <td><%=h todo.done %></td>
+    <td><%= link_to 'Show', todo %></td>
+    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+    <td><%= link_to 'Destroy', todo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New todo', new_todo_path %>

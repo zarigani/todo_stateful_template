@@ -1,0 +1,13 @@
+<div class="password">
+<h3><%= _("Forgot Password?") %></h3>
+
+<% form_tag url_for(:action => 'create') do %>
+  <p><%= label_tag :email, _("What is the email address used to create your account?") %><br />
+  <%= text_field_tag :email, "", :size => 30, :autocomplete=>'off' %></p>
+
+  <p>
+    <%= link_to _('Cancel'), login_path, :id=>'cancel_link' %>
+    <%= submit_tag _('Reset Password'), :disable_with=>_('Reset Password...') %>
+  </p>
+<% end %>
+</div>

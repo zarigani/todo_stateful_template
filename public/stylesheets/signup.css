@@ -1,0 +1,43 @@
+.signup label, 
+.signup #cancel_link {
+  font-weight: bold;
+  font-size: smaller;
+  width: 12em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+.signup {
+  padding: 0.2em 1em;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ccc;
+  width: 30em;
+}
+
+.signup legend {
+  font-weight: bold;
+}
+
+.signup a { color: #888; }
+.signup a:visited { color: #888; }
+.signup a:hover { color: #000; background:#ccc; }
+
+.signup input[type=text], 
+.signup input[type=password] {
+  padding: 2px 0;
+  margin: 0;
+}
+
+.signup input[type=submit] {
+  padding: 0;
+  margin: 0 2px;
+}
+
+.signup .formErrorMsg {
+  font-size: x-small;
+  color: red;
+  margin-left: 14em;
+}

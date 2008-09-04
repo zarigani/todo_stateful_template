@@ -1,0 +1,19 @@
+<div class="admin">
+
+<h2><%= _("Roles for %{user_login}") % {:user_login => h(@user.login_or_email)} %></h2>
+
+<p>
+  <% field_set_tag _("Roles assigned") do %>
+  <ul><%= render :partial => @user.roles %></ul>
+  <% end %>
+</p>
+
+<p>
+  <% field_set_tag _("Roles available") do %>
+  <ul><%= render :partial => (@all_roles - @user.roles) %></ul>
+  <% end %>
+</p>
+
+<p><%= link_to _('Back'), users_path %></p>
+
+</div>

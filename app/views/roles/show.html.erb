@@ -1,0 +1,10 @@
+<div class="admin">
+<% label_msg_form_for(@role, :disabled=>true) do |f| %>
+  <%= render :partial=>f %>
+<% end %>
+
+<p>
+  <%= link_to _('Edit'), edit_role_path(@role) %> |
+  <%= link_to _('Back'), roles_path %>
+</p>
+</div>

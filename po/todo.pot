@@ -1,0 +1,590 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: todo_role 1.0.0\n"
+"POT-Creation-Date: 2008-09-01 15:14+0900\n"
+"PO-Revision-Date: 2008-08-16 17:23+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/controllers/change_emails_controller.rb:18
+msgid "A email reset link has been sent to your email address."
+msgstr ""
+
+#: app/controllers/change_emails_controller.rb:21
+msgid "Your email was not changed."
+msgstr ""
+
+#: app/controllers/change_emails_controller.rb:32
+msgid "Invalid email reset URL."
+msgstr ""
+
+#: app/controllers/change_emails_controller.rb:36
+msgid "Another account logged in. You must log in."
+msgstr ""
+
+#: app/controllers/change_emails_controller.rb:39
+msgid "Your email has been reset!"
+msgstr ""
+
+#: app/controllers/change_emails_controller.rb:42
+msgid "Invalid email."
+msgstr ""
+
+#: app/controllers/change_passwords_controller.rb:18
+msgid "Password successfully updated."
+msgstr ""
+
+#: app/controllers/change_passwords_controller.rb:21
+msgid "Your password was not changed."
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:18
+msgid "Could not find a user with that email address."
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:21
+msgid "A password reset link has been sent to your email address."
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:29
+msgid "A password reset link could not be sent."
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:68
+msgid ""
+"Sorry - That is an invalid password reset code. Please check your code and "
+"try again. (Perhaps your email client inserted a carriage return?)"
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:85
+msgid "Password reset."
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:88
+msgid "Password mismatch."
+msgstr ""
+
+#: app/controllers/forgot_passwords_controller.rb:94
+msgid "Sorry - Password not reset."
+msgstr ""
+
+#: app/controllers/roles_controller.rb:49
+msgid "Role was successfully created."
+msgstr ""
+
+#: app/controllers/roles_controller.rb:66
+msgid "Role was successfully updated."
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:14
+msgid "Your username or password is incorrect."
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:16
+msgid ""
+"Your account is not active, please check your email for the activation code."
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:18
+msgid "Your account has been disabled."
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:23
+msgid "Logged in successfully"
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:49
+msgid "You have been logged out."
+msgstr ""
+
+#: app/controllers/users_controller.rb:37
+msgid ""
+"Thanks for signing up! Please check your email to activate your account "
+"before logging in."
+msgstr ""
+
+#: app/controllers/users_controller.rb:40
+msgid "There was a problem creating your account."
+msgstr ""
+
+#: app/controllers/users_controller.rb:56
+msgid "Your account was successfully updated!"
+msgstr ""
+
+#: app/controllers/users_controller.rb:59
+msgid "Your account was not changed."
+msgstr ""
+
+#: app/controllers/users_controller.rb:69
+msgid ""
+"The activation code was missing.  Please follow the URL from your email."
+msgstr ""
+
+#: app/controllers/users_controller.rb:72
+msgid ""
+"Activation code not found. Has your account already been activated? Plese "
+"try to log in."
+msgstr ""
+
+#: app/controllers/users_controller.rb:75
+msgid "Your account has already been activated. You can log in below."
+msgstr ""
+
+#: app/controllers/users_controller.rb:78
+msgid "Your account has been activated! You can now login."
+msgstr ""
+
+#: app/controllers/users_controller.rb:81
+msgid "System error occured."
+msgstr ""
+
+#: app/controllers/users_controller.rb:88
+msgid "%{user_login} disabled"
+msgstr ""
+
+#: app/controllers/users_controller.rb:90
+msgid "There was a problem disabling this user."
+msgstr ""
+
+#: app/controllers/users_controller.rb:97
+msgid "%{user_login} enabled"
+msgstr ""
+
+#: app/controllers/users_controller.rb:99
+msgid "There was a problem enabling this user."
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "permission"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|Role"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|User"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|Created at"
+msgstr ""
+
+#: app/models/permission.rb:-
+msgid "Permission|Updated at"
+msgstr ""
+
+#: app/models/role.rb:-
+msgid "role"
+msgstr ""
+
+#: app/models/role.rb:-
+msgid "Role|Name"
+msgstr ""
+
+#: app/models/role.rb:-
+msgid "Role|Created at"
+msgstr ""
+
+#: app/models/role.rb:-
+msgid "Role|Updated at"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "todo"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Body"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Due"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Done"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Created at"
+msgstr ""
+
+#: app/models/todo.rb:-
+msgid "Todo|Updated at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "user"
+msgstr ""
+
+#: app/models/user.rb:- app/views/sessions/new.html.erb:7
+msgid "User|Login"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Name"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Email"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Crypted password"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Salt"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Created at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Updated at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Remember token"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Remember token expires at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Activation code"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Activated at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|State"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Deleted at"
+msgstr ""
+
+#: app/models/user.rb:-
+msgid "User|Password reset code"
+msgstr ""
+
+#: app/models/user.rb:10 app/views/sessions/new.html.erb:10
+msgid "User|Password"
+msgstr ""
+
+#: app/models/user.rb:11
+msgid "User|Password confirmation"
+msgstr ""
+
+#: app/models/user.rb:12
+msgid "User|Old password"
+msgstr ""
+
+#: app/models/user.rb:13
+msgid "%{fn} doesn't match confirmation"
+msgstr ""
+
+#: app/models/user.rb:14
+msgid "use only letters, numbers, and .-_@ please."
+msgstr ""
+
+#: app/models/user.rb:15
+msgid "should look like an email address."
+msgstr ""
+
+#: app/models/user.rb:16
+msgid "avoid non-printing characters and ＼&gt;&lt;&amp;/ please."
+msgstr ""
+
+#: app/models/user_mailer.rb:7
+msgid "Please activate your new account"
+msgstr ""
+
+#: app/models/user_mailer.rb:14
+msgid "Your account has been activated!"
+msgstr ""
+
+#: app/models/user_mailer.rb:20
+msgid "You have requested to change your password"
+msgstr ""
+
+#: app/models/user_mailer.rb:26
+msgid "Your password has been reset."
+msgstr ""
+
+#: app/models/user_mailer.rb:32
+msgid "Please reset your new email"
+msgstr ""
+
+#: app/models/user_mailer.rb:40
+msgid "Your email has been reset."
+msgstr ""
+
+#: app/views/change_emails/edit.html.erb:2 app/views/layouts/_menu.html.erb:13
+msgid "Change Email"
+msgstr ""
+
+#: app/views/change_emails/edit.html.erb:8
+#: app/views/change_passwords/edit.html.erb:10
+#: app/views/forgot_passwords/new.html.erb:9 app/views/users/edit.html.erb:8
+#: app/views/users/new.html.erb:7
+msgid "Cancel"
+msgstr ""
+
+#: app/views/change_emails/edit.html.erb:9
+msgid "Reset Email"
+msgstr ""
+
+#: app/views/change_emails/edit.html.erb:9
+msgid "Reset Email..."
+msgstr ""
+
+#: app/views/change_passwords/edit.html.erb:2
+#: app/views/layouts/_menu.html.erb:12
+msgid "Change Password"
+msgstr ""
+
+#: app/views/change_passwords/edit.html.erb:6
+msgid "New password"
+msgstr ""
+
+#: app/views/change_passwords/edit.html.erb:7
+msgid "New password confirmation"
+msgstr ""
+
+#: app/views/change_passwords/edit.html.erb:11
+msgid "Change password"
+msgstr ""
+
+#: app/views/forgot_passwords/edit.html.erb:2
+#: app/views/forgot_passwords/new.html.erb:10
+msgid "Reset Password"
+msgstr ""
+
+#: app/views/forgot_passwords/edit.html.erb:10
+msgid "Reset Your Password"
+msgstr ""
+
+#: app/views/forgot_passwords/edit.html.erb:10
+msgid "Reset Your Password..."
+msgstr ""
+
+#: app/views/forgot_passwords/new.html.erb:2
+#: app/views/layouts/_menu.html.erb:20 app/views/sessions/new.html.erb:23
+msgid "Forgot Password?"
+msgstr ""
+
+#: app/views/forgot_passwords/new.html.erb:5
+msgid "What is the email address used to create your account?"
+msgstr ""
+
+#: app/views/forgot_passwords/new.html.erb:10
+msgid "Reset Password..."
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:5
+msgid "Roles"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:6
+msgid "Users"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:11
+msgid "Edit Profile"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:14
+msgid "Log Out"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:17
+msgid "Logged in as:"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:18 app/views/users/show.html.erb:10
+msgid "Home"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:21 app/views/sessions/new.html.erb:22
+msgid "Sign Up"
+msgstr ""
+
+#: app/views/layouts/_menu.html.erb:22 app/views/sessions/new.html.erb:3
+msgid "Log In"
+msgstr ""
+
+#: app/views/permissions/index.html.erb:3
+msgid "Roles for %{user_login}"
+msgstr ""
+
+#: app/views/permissions/index.html.erb:6
+msgid "Roles assigned"
+msgstr ""
+
+#: app/views/permissions/index.html.erb:12
+msgid "Roles available"
+msgstr ""
+
+#: app/views/permissions/index.html.erb:17 app/views/roles/edit.html.erb:10
+#: app/views/roles/new.html.erb:9 app/views/roles/show.html.erb:8
+msgid "Back"
+msgstr ""
+
+#: app/views/roles/_role.html.erb:4
+msgid "remove role"
+msgstr ""
+
+#: app/views/roles/_role.html.erb:6
+msgid "assign role"
+msgstr ""
+
+#: app/views/roles/edit.html.erb:5
+msgid "Update"
+msgstr ""
+
+#: app/views/roles/edit.html.erb:9 app/views/roles/index.html.erb:17
+msgid "Show"
+msgstr ""
+
+#: app/views/roles/index.html.erb:2
+msgid "Listing roles"
+msgstr ""
+
+#: app/views/roles/index.html.erb:18 app/views/roles/show.html.erb:7
+msgid "Edit"
+msgstr ""
+
+#: app/views/roles/index.html.erb:19
+msgid "Destroy"
+msgstr ""
+
+#: app/views/roles/index.html.erb:19
+msgid "Are you sure?"
+msgstr ""
+
+#: app/views/roles/index.html.erb:24
+msgid "New role"
+msgstr ""
+
+#: app/views/roles/new.html.erb:5
+msgid "Create"
+msgstr ""
+
+#: app/views/sessions/new.html.erb:14
+msgid "Remember me"
+msgstr ""
+
+#: app/views/sessions/new.html.erb:16
+msgid "Log in"
+msgstr ""
+
+#: app/views/sessions/new.html.erb:16
+msgid "Log in..."
+msgstr ""
+
+#: app/views/user_mailer/activation.erb:1
+msgid ""
+"%{user_login}, your account has been activated.  To visit the site, follow "
+"the link below:"
+msgstr ""
+
+#: app/views/user_mailer/change_email.erb:1
+msgid "%{user_login}, to reset your email, please visit"
+msgstr ""
+
+#: app/views/user_mailer/forgot_password.erb:1
+msgid "%{user_login}, to reset your password, please visit"
+msgstr ""
+
+#: app/views/user_mailer/reset_email.erb:1
+msgid "%{user_login}, Your email has been reset"
+msgstr ""
+
+#: app/views/user_mailer/reset_password.erb:1
+msgid "%{user_login}, Your password has been reset"
+msgstr ""
+
+#: app/views/user_mailer/signup_notification.erb:1
+msgid "Your account has been created."
+msgstr ""
+
+#: app/views/user_mailer/signup_notification.erb:3
+msgid "Username: %{user_login}"
+msgstr ""
+
+#: app/views/user_mailer/signup_notification.erb:5
+msgid "Visit this url to activate your account:"
+msgstr ""
+
+#: app/views/users/edit.html.erb:2
+msgid "Edit Your Account"
+msgstr ""
+
+#: app/views/users/edit.html.erb:9
+msgid "Save"
+msgstr ""
+
+#: app/views/users/index.html.erb:2
+msgid "All Users"
+msgstr ""
+
+#: app/views/users/index.html.erb:28
+msgid "enable"
+msgstr ""
+
+#: app/views/users/index.html.erb:30
+msgid "disable"
+msgstr ""
+
+#: app/views/users/index.html.erb:33
+msgid "edit roles"
+msgstr ""
+
+#: app/views/users/new.html.erb:2
+msgid "New Account"
+msgstr ""
+
+#: app/views/users/new.html.erb:8
+msgid "Sign up"
+msgstr ""
+
+#: app/views/users/new.html.erb:8
+msgid "Sign up..."
+msgstr ""
+
+#: app/views/users/show.html.erb:2
+msgid "Your Account"
+msgstr ""
+
+#: app/views/users/show.html.erb:8
+msgid "Updated on: "
+msgstr ""
+
+#: lib/authenticated_role.rb:5
+msgid "An account is logged in now. Please logout at once."
+msgstr ""
+
+#: lib/authenticated_role.rb:11
+msgid "You don't have permission to complete that action."
+msgstr ""
+
+#: lib/authenticated_system.rb:68
+msgid "You must be logged in to access this feature."
+msgstr ""

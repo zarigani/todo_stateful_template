@@ -1,0 +1,41 @@
+.admin {
+  padding: 0;
+  margin: 0 0.5em;
+}
+
+.admin table {
+    /*width: 530px;*/
+    width: 640px;
+    border: 1px #E3E3E3 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+
+.admin table th {
+    padding: 5px;
+    border: #E3E3E3 solid;
+    border-width: 0 0 1px 1px;
+    background: #F5F5F5;
+    font-size: 80%;
+    font-weight: bold;
+    line-height: 120%;
+    text-align: center;
+    white-space: nowrap;
+    }
+.admin table td {
+    padding: 5px;
+    border: 1px #E3E3E3 solid;
+    border-width: 0 0 1px 1px;
+    font-size: 80%;
+    text-align: left;
+    white-space: nowrap;
+    }
+
+.admin fieldset {
+  background: #F5F5F5;
+  width: 30em;
+}
+
+.admin .disable {
+  color: #ddd;
+}

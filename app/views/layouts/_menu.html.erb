@@ -1,0 +1,26 @@
+<div class="menu">
+<ul id="nav">
+   <% if logged_in? %>
+   <% if current_user.has_role?('administrator') %>
+     <li><%= link_to_unless_current _('Roles'), roles_path %></li>
+     <li><%= link_to_unless_current _('Users'), users_path %></li>
+   <% end %>
+     <li></li><%# for space %>
+     <li><%= link_to h(current_user.login_or_email), user_path(current_user) %>
+       <ul>
+         <li><%= link_to _('Edit Profile'), edit_user_path(current_user) %></li>
+         <li><%= link_to _('Change Password'), edit_user_change_password_path(current_user) %></li>
+         <li><%= link_to _('Change Email'), edit_user_change_email_path(current_user) %></li>
+         <li><%= link_to _('Log Out'), logout_url %></li>
+       </ul>
+     </li>
+     <li style="text-align:right; margin-right:0.5em;"><%= _("Logged in as:") %></li>
+     <li><%= link_to_unless_current _("Home"), root_path %></li>
+   <% else %>
+     <li><%= link_to_unless_current _('Forgot Password?'), new_forgot_password_path %></li>
+     <li><%= link_to_unless_current _('Sign Up'), new_user_path %></li>
+     <li><%= link_to_unless_current _('Log In'), login_path %></li>
+   <% end %>
+</ul>
+<div class="float-clear"></div>
+</div>

@@ -1,0 +1,13 @@
+<div class="password">
+<h3><%= _("Reset Password") %></h3>
+
+<% simple_form_for @user, :url=>{:action => "update", :id => params[:id]} do |f| %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+
+  <p>
+    <%#= link_to 'Cancel', login_path, :id=>'cancel_link' %>
+    <%= submit_tag _('Reset Your Password'), :disable_with=>_('Reset Your Password...') %>
+  </p>
+<% end %>
+</div>

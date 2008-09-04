@@ -1,0 +1,18 @@
+<p>
+  <b>Body:</b>
+  <%=h @todo.body %>
+</p>
+
+<p>
+  <b>Due:</b>
+  <%=h @todo.due %>
+</p>
+
+<p>
+  <b>Done:</b>
+  <%=h @todo.done %>
+</p>
+
+
+<%= link_to 'Edit', edit_todo_path(@todo) %> |
+<%= link_to 'Back', todos_path %>

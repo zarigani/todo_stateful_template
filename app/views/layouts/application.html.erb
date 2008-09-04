@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= controller.controller_name %>: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold', 'menu', 'login', 'signup', 'password', 'admin', 'footer' %>
+</head>
+<body>
+<div class="wrapper">
+
+  <%= render :partial=>'layouts/menu' %>
+
+  <div id="page">
+
+    <p style="color:green; text-align:center"><%= flash[:notice] %></p>
+    <p style="color:red; text-align:center"><%= flash[:error] %></p>
+
+    <%= yield  %>
+
+    <div class="push"></div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <%= render :partial=>'layouts/footer' %>
+</div>
+</body>
+</html>

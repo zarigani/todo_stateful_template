@@ -1,0 +1,12 @@
+<div class="signup">
+<h3><%= _("Change Email") %></h3>
+
+<% simple_form_for @user, :url=>{:action => "update", :id => params[:id]}, :autocomplete=>'off' do |f| %>
+  <%= f.text_field :email %>
+
+  <p>
+    <%= link_to _('Cancel'), root_path, :id=>'cancel_link' %>
+    <%= f.submit _('Reset Email'), :disable_with=>_('Reset Email...') %>
+  </p>
+<% end %>
+</div>

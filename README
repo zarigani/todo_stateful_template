@@ -1,0 +1,16 @@
+ログイン認証の雛形プロジェクトです。
+rails 2.1、sqlite 3、gmailの環境で若干の設定をして、すぐに稼働することができます。
+
+* config/initializers/mail.rbの設定
+USERNAME = 'xxxxxx' #@gmail.comを除くユーザー名を設定
+PASSWORD = 'xxxxxx' #パスワードを設定
+...（中略）...
+
+* app/models/user_mailer.rbの設定
+class UserMailer < ActionMailer::Base
+  YOURSITE = 'localhost:3000' #サーバーのURLが'http://localhost:3000/'の場合
+...（中略）...
+
+* ログイン
+ログイン名: admin
+パスワード: admin

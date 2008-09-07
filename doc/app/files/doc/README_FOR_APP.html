@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README_FOR_APP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README_FOR_APP</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>doc/README_FOR_APP
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Sun Sep 07 20:22:01 +0900 2008</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+ログイン認証の雛形プロジェクトです。
+</p>
+<ul>
+<li>rails 2.1、sqlite
+3、gmailの環境で若干の設定をして、すぐに稼働することができます。
+
+</li>
+</ul>
+<h3>config/initializers/mail.rbの設定</h3>
+<pre>
+  USERNAME = 'xxxxxx' #@gmail.comを除くユーザー名を設定
+  PASSWORD = 'xxxxxx' #パスワードを設定
+  ...（中略）...
+</pre>
+<h3>app/models/user_mailer.rbの設定</h3>
+<pre>
+  class UserMailer &lt; ActionMailer::Base
+    YOURSITE = 'localhost:3000' #サーバーのURLが'http://localhost:3000/'の場合
+  ...（中略）...
+</pre>
+<h3>ログインの方法</h3>
+<table>
+<tr><td valign="top">ログイン名:</td><td>admin
+
+</td></tr>
+<tr><td valign="top">パスワード:</td><td>admin
+
+</td></tr>
+</table>
+<h3>メモ</h3>
+<ul>
+<li>rake
+db:migrateまたはdb:migrate:resetによって、administrator権限を持ったadminユーザーも生成されます。
+
+<ul>
+<li>その際、上記メールの設定が正しく行われている場合、ユーザー登録とそのアクティベーション完了のメールも送信されます。
+
+</li>
+</ul>
+</li>
+<li>DBのusersテーブルには、login,email,nameフィールドが存在しています。
+
+<ul>
+<li>このアプリケーションでは、login,emailフィールドのみ使用しています。nameフィールドは未使用です。
+
+</li>
+<li>loginまたはemailどちらを使ってもログインできるようになっています。この設定は必要に応じてカスタマイズしてください。
+
+</li>
+</ul>
+</li>
+<li>追加するより削除する方が簡単なので、余分と思われるコードもそのまま残しています。
+
+</li>
+<li>権限(role)によるアクセス制限は、改善の余地大いにありです。
+
+<ul>
+<li>2、3の権限を設定して単純なアクセス制限なら対応できますが、
+
+</li>
+<li>数多くの権限を設定して複雑なアクセス制限をする時には、工夫しないと破綻しそうです。
+
+</li>
+</ul>
+</li>
+<li>可能な限りrestful_authenticationのファイルや生成したコードは修正しないようにしています。
+
+<ul>
+<li>aasmを有効にするためにinit.rbは修正しました。
+
+</li>
+<li>状態管理のコードはアプリケーションの仕様によって修正する可能性大なので、本来はaasm_roles.rbやstateful_roles.rbをアプリケーションルートのlibフォルダにコピーしておくべきかもしれません。
+
+</li>
+<li>そうすればinit.rbの修正も不要になり、プラグインのアップデートもやり易くなると思います。
+
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

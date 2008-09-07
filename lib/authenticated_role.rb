@@ -1,3 +1,4 @@
+# 権限(role)によるアクセス制限を行う
 module AuthenticatedRole
   protected
     # ログインしていないことを要求して、ログインしていたらpermission_deniedを処理する
@@ -5,6 +6,12 @@ module AuthenticatedRole
       !logged_in? || permission_denied(_("An account is logged in now. Please logout at once."))
     end
 
+    # ログイン中のユーザーが、引数で指定された権限(role)を持っているか判定する
+    # - check_administrator_roleから呼び出される
+    # - もし新たな権限「system」を追加したとしたら、それをチェックする以下のメソッド定義も必要になる
+    #     def check_sytem_role
+    #       check_role('system')
+    #     end
     def check_role(role)
       unless logged_in? && @current_user.has_role?(role)
         if logged_in?
@@ -37,37 +44,41 @@ module AuthenticatedRole
       end
     end
 
-    # リンクもとURLを記録する
+    # リンク元URLを記録する
     # request.env["HTTP_REFERER"]には、リンクをクリックして移動した時のみ記録される
     def store_referer
       session[:refer_to] = request.env["HTTP_REFERER"]
     end
 
     # request.env["HTTP_REFERER"]に記録されないリンクも記録する（URLを手入力した場合）
-    # after_filter :store_last で呼び出され、記録する
+    # app/controllers/application.rbで以下のように呼び出して記録する
+    #   after_filter :store_last
     def store_last
       if logged_in? && controller_name != 'sessions'
         flash[:last_to] = request.request_uri
       end
     end
 
+    # リンク元URLが記録されていたら、そこへリダイレクト
+    # リンク元URLが記録されていない場合は、引数defaultのURLへリダイレクト
     def redirect_to_referer_or_default(default)
       redirect_to(session[:refer_to] || default)
       session[:refer_to] = nil
     end
 
-    # Redirect to the URI stored by the most recent store_location call or
-    # to the passed default.  Set an appropriately modified
-    #   after_filter :store_location, :only => [:index, :new, :show, :edit]
-    # for any controller you want to be bounce-backable.
+    # store_lastによって記録されたURLが残っていたら、そこへリダイレクト
+    # URLが記録されていない場合は、引数defaultのURLへリダイレクト
+    # - permission_deniedから呼び出される
+    # - アクセス権がない場合に、無条件にアプリケーションルートURLにリダイレクトするのではなく、
+    # - 可能な限り現在のページを再読み込みして警告のメッセージを表示しようとする
     def redirect_last_or_default(default)
       redirect_to(flash[:last_to] || default)
     end
     
     # 他人のURLにアクセスしようとした場合に、自分のURLにリダイレクトさせる
-    #   adminが以下のURLにアクセスした場合...
+    # [admin(id = 1)が以下のURLにアクセスした場合...]
     #   http://localhost:3000/users/2
-    #   リダイレクトして以下のURLへ
+    #   リダイレクトして次のURLへ
     #   http://localhost:3000/users/1
     def current_user_required
       return unless current_user

@@ -1,5 +1,10 @@
 require 'digest/sha1'
 
+# メールアドレスだけをログインIDにする場合は...
+# - :loginの検証はすべてコメントアウト(またはlogin_required?が常にfalseを返すように設定してもOK)
+# - app/views/users/_label_msg_form.html.erbの「label_msg_form.text_field :login」をコメントアウト
+# - self.authenticateの「u = find_by_login_and_state(login, ['pending', 'active'])」をコメントアウト
+# - self.authenticateの「u = find_by_email_and_state(login, ['pending', 'active']) unless u」を有効にする
 class User < ActiveRecord::Base
   include Authentication
   include Authentication::ByPassword
@@ -20,10 +25,6 @@ class User < ActiveRecord::Base
   attr_accessor :old_password, :new_email
 
 
-  # メールアドレスをログインIDにする場合は...
-  #   :loginの検証はすべてコメントアウトする(login_required?がfalseを返すように設定してもOK)
-  #   app/views/users/_label_msg_form.html.erb の text_field :login もコメントアウトする
-  #   self.authenticateを アクティベーション前の状態を警告する設定　+ メールアドレスをログインIDにする設定 を有効にする
   validates_presence_of   :login, :if => :login_required?
   validates_length_of     :login, :if => :login_required?, :within => 3..40
   validates_uniqueness_of :login, :if => :login_required?
@@ -59,7 +60,7 @@ class User < ActiveRecord::Base
   # We really need a Dispatch Chain here or something.
   # This will also let us return a human error message.
   #
-  # loginまたはemailでログイン可能な設定
+  # loginまたはemailでログイン可能な設定になっている
   def self.authenticate(login, password)
     return nil if login.blank? || password.blank?
     # デフォルト設定

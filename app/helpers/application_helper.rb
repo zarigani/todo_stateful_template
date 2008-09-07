@@ -6,7 +6,7 @@ module ApplicationHelper
   #     f.text_field :body
   #   end
   #
-  #   simple_form_forを利用すれば:builderオプションは省略できる
+  # simple_form_forを利用すれば:builderオプションは省略できる
   #
   #   simple_form_for @todo do |f|
   #     f.text_field :body
@@ -39,17 +39,17 @@ module ApplicationHelper
   end
 end
 
-# FormHelperの拡張
 module ActionView
   module Helpers
+    # FormHelperの拡張
     module FormHelper
-      # FormBuilderに合わせて、内容は同じだが念のためオーバーライド
+      # Railsオリジナルと内容は同じだが、FormBuilderに合わせて念のためオーバーライド
       def label(object_name, method, text = nil, options = {})
         InstanceTag.new(object_name, method, self, nil, options.delete(:object)).to_label_tag(text, options)
       end
 
       # 円数値入力用のテキストフィールドを生成
-      # 右寄せ、3桁区切り[   1,000]、オートコンプリートオフ
+      # - 右寄せ、3桁区切り[   1,000]、オートコンプリートオフ
       def yen_field(object_name, method, options = {})
         # object_nameに基づくオブジェクト(モデルのインスタンス)から、methodが示すフィールドの値を取得している。
         # 例: yen_field 'slip', 'total_yen' --> @slip.total_yenがvalueに設定される。
@@ -93,18 +93,18 @@ module ActionView
     
     # form_for, fields_forブロック内のメソッド定義
     class FormBuilder
-      # f.labl
-      # 内容は同じだが、ここでオーバーライドしておかないと翻訳されなかった
+      # f.lableの定義
+      # - Railsオリジナルと内容は同じだが、ここでオーバーライドしておかないと翻訳されなかった
       def label(method, text = nil, options = {})
         @template.label(@object_name, method, text, objectify_options(options))
       end
 
-      # f.yen_field
+      # f.yen_fieldの定義
       def yen_field(method, options = {})
         @template.yen_field(@object_name, method, options.merge(:object => @object))
       end
 
-      # f.error_messages_on
+      # f.error_messages_onの定義
       def error_messages_on(method, prepend_text = "", append_text = "", css_class = "formErrorMsg")
         @template.error_messages_on(@object, method, prepend_text, append_text, css_class)
       end
@@ -112,10 +112,10 @@ module ActionView
   end
 end
 
-# visual_effectの:startcolorオプションでエラー対策
-# http://d.hatena.ne.jp/zariganitosh/20080123/1201163615#visual_effect_startcolor
 module ActionView
   module Helpers
+    # visual_effectの:startcolorオプションでエラー対策
+    # - http://d.hatena.ne.jp/zariganitosh/20080123/1201163615#visual_effect_startcolor
     module ScriptaculousHelper
       def visual_effect(name, element_id = false, js_options = {})
         element = element_id ? element_id.to_json : "element"
@@ -141,8 +141,8 @@ module ActionView
   end
 end
 
-# nil.to_s(:simple)を利用可能にする
 class NilClass
+  # nil.to_s(:simple)を利用可能にする
   def to_s(*args)
     ""
   end

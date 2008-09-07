@@ -1,18 +1,21 @@
+# FormBuilderを拡張する時の基本クラス
+# - このクラスを継承してFormBuilderを拡張する
+# - よく使いそうな変数やメソッドを定義しておく
 class BaseFormBuilder < ActionView::Helpers::FormBuilder
   class_inheritable_accessor :form_helpers
   self.form_helpers = ActionView::Helpers::FormHelper.instance_methods + 
                         ActionView::Helpers::FormOptionsHelper.instance_methods
   # 上記設定は以下と同等、参考ページ<http://rubyist.g.hatena.ne.jp/yamaz/20070107>
-  #  def self.form_helpers
-  #    @@form_helpers = ActionView::Helpers::FormHelper.instance_methods + 
-  #                       ActionView::Helpers::FormOptionsHelper.instance_methods
-  #  end
+  #   def self.form_helpers
+  #     @@form_helpers = ActionView::Helpers::FormHelper.instance_methods + 
+  #                        ActionView::Helpers::FormOptionsHelper.instance_methods
+  #   end
 
 private
 
   # 以下のオプションをマージする
-  #   args（f.text_field等のオプション）
-  #   @options（form_for,fields_forのオプション）の中の独自オプション
+  # - args（f.text_field等のオプション）
+  # - @options（form_for,fields_forのオプション）の中の独自オプション
   def merge_options_with(args)
     #args_hash = args.last.is_a?(Hash) ? args.pop : {}
     args_hash = args.extract_options!

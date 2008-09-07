@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: label_msg_form_builder.rb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>label_msg_form_builder.rb</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>lib/label_msg_form_builder.rb
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Sun Sep 07 17:51:57 +0900 2008</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+form_forに:builder =&gt; <a
+href="../../classes/LabelMsgFormBuilder.html">LabelMsgFormBuilder</a>オプションを設定することで、以下の機能が発揮される
+</p>
+<h3>ラベル付きエラーメッセージ付きのフォームを生成する</h3>
+<pre>
+    &lt;% form_for @slip do |f| %&gt;
+      &lt;p&gt;
+        &lt;%= f.label :number %&gt;
+        &lt;%= f.text_field :number %&gt;
+        &lt;%= f.error_messages_on :number %&gt;
+      &lt;/p&gt;
+    &lt;% end %&gt;
+</pre>
+<p>
+:builder=&gt;<a
+href="../../classes/LabelMsgFormBuilder.html">LabelMsgFormBuilder</a>オプションを利用すると以下のように書ける
+</p>
+<pre>
+    &lt;% form_for @slip, :builder=&gt;LabelMsgFormBuilder do |f| %&gt;
+      &lt;%= f.text_field :number %&gt;
+    &lt;% end %&gt;
+</pre>
+<h3>:url, :html, :builder以外のform_forオプションは、そのブロック内のフォームにマージされる</h3>
+<pre>
+    &lt;% form_for @user, :disabled=&gt;true, :html=&gt;{:autocomplete=&gt;'off'}, :builder=&gt;LabelMsgFormBuilder do |f| %&gt;
+      &lt;%= f.text_field :login %&gt;
+      &lt;%= f.text_field :email %&gt;
+    &lt;% end %&gt;
+</pre>
+<p>
+上記:disabled=&gt;trueは、以下のように展開される
+</p>
+<pre>
+    &lt;form action=&quot;/users/1&quot; autocomplete=&quot;off&quot; class=&quot;edit_user&quot; id=&quot;edit_user_1&quot; method=&quot;post&quot;&gt;
+      &lt;p&gt;
+        &lt;label for=&quot;user_login&quot; style=&quot;display:table&quot;&gt;ログイン名&lt;/label&gt;
+        &lt;input disabled=&quot;disabled&quot; id=&quot;user_login&quot; name=&quot;user[login]&quot; size=&quot;30&quot; type=&quot;text&quot; value=&quot;&quot; /&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label for=&quot;user_email&quot; style=&quot;display:table&quot;&gt;Eメール&lt;/label&gt;
+        &lt;input disabled=&quot;disabled&quot; id=&quot;user_email&quot; name=&quot;user[email]&quot; size=&quot;30&quot; type=&quot;text&quot; value=&quot;&quot; /&gt;
+      &lt;/p&gt;
+    &lt;/form&gt;
+</pre>
+<ul>
+<li>:login,
+:emailそれぞれのinputタグに<tt>disabled=&quot;disabled&quot;</tt>が設定されているのが確認できる
+
+</li>
+<li>ちなみに:html=&gt;{:autocomplete=&gt;&#8217;off&#8217;}はformタグで展開され、そのフォームブロック内のすべてのtext_fieldに効果を及ぼす
+
+</li>
+<li>同様の効果がその他のオプションについても欲しいため、このようなマージを行う仕様とした
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

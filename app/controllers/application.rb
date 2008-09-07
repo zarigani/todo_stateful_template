@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include AuthenticatedRole
 
+  after_filter :store_last
+
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details

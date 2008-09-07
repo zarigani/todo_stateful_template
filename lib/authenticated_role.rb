@@ -54,7 +54,7 @@ module AuthenticatedRole
     # app/controllers/application.rbで以下のように呼び出して記録する
     #   after_filter :store_last
     def store_last
-      if logged_in? && controller_name != 'sessions'
+      if logged_in? && controller_name != 'sessions' && request.get?
         flash[:last_to] = request.request_uri
       end
     end

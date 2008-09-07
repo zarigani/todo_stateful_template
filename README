@@ -1,33 +1,33 @@
-# ログイン認証の雛形プロジェクトです。
-# - rails 2.1、sqlite 3、gmailの環境で若干の設定をして、すぐに稼働することができます。
-# 
-# ===config/initializers/mail.rbの設定
-#
-#   USERNAME = 'xxxxxx' #@gmail.comを除くユーザー名を設定
-#   PASSWORD = 'xxxxxx' #パスワードを設定
-#   ...（中略）...
-# 
-# ===app/models/user_mailer.rbの設定
-#
-#   class UserMailer < ActionMailer::Base
-#     YOURSITE = 'localhost:3000' #サーバーのURLが'http://localhost:3000/'の場合
-#   ...（中略）...
-# 
-# ===ログインの方法
-# ログイン名:: admin
-# パスワード:: admin
-#
-# ===メモ
-# - rake db:migrateまたはdb:migrate:resetによって、administrator権限を持ったadminユーザーも生成されます。
-#   - その際、上記メールの設定が正しく行われている場合、ユーザー登録とそのアクティベーション完了のメールも送信されます。
-# - DBのusersテーブルには、login,email,nameフィールドが存在しています。
-#   - このアプリケーションでは、login,emailフィールドのみ使用しています。nameフィールドは未使用です。
-#   - loginまたはemailどちらを使ってもログインできるようになっています。この設定は必要に応じてカスタマイズしてください。
-# - 追加するより削除する方が簡単なので、余分と思われるコードもそのまま残しています。
-# - 権限(role)によるアクセス制限は、改善の余地大いにありです。
-#   - 2、3の権限を設定して単純なアクセス制限なら対応できますが、
-#   - 数多くの権限を設定して複雑なアクセス制限をする時には、工夫しないと破綻しそうです。
-# - 可能な限りrestful_authenticationのファイルや生成したコードは修正しないようにしています。
-#   - aasmを有効にするためにinit.rbは修正しました。
-#   - 状態管理のコードはアプリケーションの仕様によって修正する可能性大なので、本来はaasm_roles.rbやstateful_roles.rbをアプリケーションルートのlibフォルダにコピーしておくべきかもしれません。
-#   - そうすればinit.rbの修正も不要になり、プラグインのアップデートもやり易くなると思います。
+ログイン認証の雛形プロジェクトです。
+- rails 2.1、sqlite 3、gmailの環境で若干の設定をして、すぐに稼働することができます。
+
+===config/initializers/mail.rbの設定
+
+  USERNAME = 'xxxxxx' #@gmail.comを除くユーザー名を設定
+  PASSWORD = 'xxxxxx' #パスワードを設定
+  ...（中略）...
+
+===app/models/user_mailer.rbの設定
+
+  class UserMailer < ActionMailer::Base
+    YOURSITE = 'localhost:3000' #サーバーのURLが'http://localhost:3000/'の場合
+  ...（中略）...
+
+===ログインの方法
+ログイン名:: admin
+パスワード:: admin
+
+===メモ
+- rake db:migrateまたはdb:migrate:resetによって、administrator権限を持ったadminユーザーも生成されます。
+  - その際、上記メールの設定が正しく行われている場合、ユーザー登録とそのアクティベーション完了のメールも送信されます。
+- DBのusersテーブルには、login,email,nameフィールドが存在しています。
+  - このアプリケーションでは、login,emailフィールドのみ使用しています。nameフィールドは未使用です。
+  - loginまたはemailどちらを使ってもログインできるようになっています。この設定は必要に応じてカスタマイズしてください。
+- 追加するより削除する方が簡単なので、余分と思われるコードもそのまま残しています。
+- 権限(role)によるアクセス制限は、改善の余地大いにありです。
+  - 2、3の権限を設定して単純なアクセス制限なら対応できますが、
+  - 数多くの権限を設定して複雑なアクセス制限をする時には、工夫しないと破綻しそうです。
+- 可能な限りrestful_authenticationのファイルや生成したコードは修正しないようにしています。
+  - aasmを有効にするためにinit.rbは修正しました。
+  - 状態管理のコードはアプリケーションの仕様によって修正する可能性大なので、本来はaasm_roles.rbやstateful_roles.rbをアプリケーションルートのlibフォルダにコピーしておくべきかもしれません。
+  - そうすればinit.rbの修正も不要になり、プラグインのアップデートもやり易くなると思います。

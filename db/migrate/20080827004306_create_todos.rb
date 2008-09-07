@@ -4,6 +4,7 @@ class CreateTodos < ActiveRecord::Migration
       t.string :body
       t.date :due
       t.boolean :done
+      t.integer :user_id
 
       t.timestamps
     end

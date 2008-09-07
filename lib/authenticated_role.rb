@@ -84,9 +84,9 @@ module AuthenticatedRole
       return unless current_user
       case
       when params[:user_id] && params[:user_id] != current_user.id.to_s
-        redirect_to :user_id => current_user.id
-      when params[:id]      && params[:id]      != current_user.id.to_s
-        redirect_to :id      => current_user.id
+        redirect_to :overwrite_params => {:user_id => current_user.id}
+      when params[:id]      && params[:id]      != current_user.id.to_s && controller_name == 'users'
+        redirect_to :id => current_user.id
       end
     end
 end

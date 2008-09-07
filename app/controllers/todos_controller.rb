@@ -1,10 +1,11 @@
 class TodosController < ApplicationController
   before_filter :login_required
+  before_filter :current_user_required
 
   # GET /todos
   # GET /todos.xml
   def index
-    @todos = Todo.find(:all)
+    @todos = current_user.todos
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +16,7 @@ class TodosController < ApplicationController
   # GET /todos/1
   # GET /todos/1.xml
   def show
-    @todo = Todo.find(params[:id])
+    @todo = current_user.todos.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -36,7 +37,7 @@ class TodosController < ApplicationController
 
   # GET /todos/1/edit
   def edit
-    @todo = Todo.find(params[:id])
+    @todo = current_user.todos.find(params[:id])
   end
 
   # POST /todos
@@ -45,10 +46,10 @@ class TodosController < ApplicationController
     @todo = Todo.new(params[:todo])
 
     respond_to do |format|
-      if @todo.save
+      if current_user.todos << @todo
         flash[:notice] = 'Todo was successfully created.'
-        format.html { redirect_to(@todo) }
-        format.xml  { render :xml => @todo, :status => :created, :location => @todo }
+        format.html { redirect_to([current_user, @todo]) }
+        format.xml  { render :xml => @todo, :status => :created, :location => [current_user, @todo] }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @todo.errors, :status => :unprocessable_entity }
@@ -59,12 +60,12 @@ class TodosController < ApplicationController
   # PUT /todos/1
   # PUT /todos/1.xml
   def update
-    @todo = Todo.find(params[:id])
+    @todo = current_user.todos.find(params[:id])
 
     respond_to do |format|
       if @todo.update_attributes(params[:todo])
         flash[:notice] = 'Todo was successfully updated.'
-        format.html { redirect_to(@todo) }
+        format.html { redirect_to([current_user, @todo]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,11 +77,11 @@ class TodosController < ApplicationController
   # DELETE /todos/1
   # DELETE /todos/1.xml
   def destroy
-    @todo = Todo.find(params[:id])
+    @todo = current_user.todos.find(params[:id])
     @todo.destroy
 
     respond_to do |format|
-      format.html { redirect_to(todos_url) }
+      format.html { redirect_to(user_todos_url) }
       format.xml  { head :ok }
     end
   end

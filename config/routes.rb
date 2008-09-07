@@ -16,13 +16,12 @@ ActionController::Routing::Routes.draw do |map|
     users.resource  :change_password
     users.resource  :change_email
     users.resources :permissions
+    users.resources :todos
   end
 
   map.resource :forgot_password
 
   map.resource :session
-
-  map.resources :todos
 
   # The priority is based upon order of creation: first created -> highest priority.
 

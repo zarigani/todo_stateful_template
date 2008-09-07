@@ -46,6 +46,7 @@ class User < ActiveRecord::Base
 
   has_many :permissions
   has_many :roles, :through => :permissions
+  has_many :todos
 
 
   # HACK HACK HACK -- how to do attr_accessible from here?

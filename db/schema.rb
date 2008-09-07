@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20080827011710) do
     t.string   "body"
     t.date     "due"
     t.boolean  "done"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
